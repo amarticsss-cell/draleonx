@@ -1,0 +1,196 @@
+/* -----------------------------------------------------------
+   GLOBAL RESET
+----------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #fff;
+    background: transparent;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* -----------------------------------------------------------
+   FULLSCREEN BACKGROUND VIDEO
+----------------------------------------------------------- */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;          /* kunci utama agar full screen */
+    z-index: -2;
+}
+
+/* DARK OVERLAY — supaya teks tetap terbaca */
+#overlay-dark {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55); /* tingkatkan/kurangi sesuai video */
+    backdrop-filter: blur(1px);   /* blur halus = premium look */
+    z-index: -1;
+}
+
+/* -----------------------------------------------------------
+   WRAPPER (CONTENT FLOATING ABOVE VIDEO)
+----------------------------------------------------------- */
+#wrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 25px;
+    text-align: center;
+}
+
+/* -----------------------------------------------------------
+   HEADER
+----------------------------------------------------------- */
+#header .content .inner {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* hilangkan garis HTML5UP */
+h1.major, h2.major { border: none !important; }
+
+/* -----------------------------------------------------------
+   NAVIGATION
+----------------------------------------------------------- */
+nav ul {
+    list-style: none;
+    margin-top: 30px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+nav ul li a:hover {
+    opacity: 0.6;
+}
+
+/* -----------------------------------------------------------
+   ARTICLES
+----------------------------------------------------------- */
+#main article {
+    max-width: 750px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.image.main img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* -----------------------------------------------------------
+   FORMS
+----------------------------------------------------------- */
+form .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+form .field {
+    width: 100%;
+}
+
+form .half {
+    width: calc(50% - 8px);
+}
+
+input, textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 12px;
+    color: #fff;
+    border-radius: 6px;
+    backdrop-filter: blur(3px);  /* efek kaca */
+}
+
+input:focus, textarea:focus {
+    background: rgba(255,255,255,0.15);
+    border-color: #fff;
+    outline: none;
+}
+
+.actions input {
+    background: rgba(255,255,255,0.9);
+    color: #000;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.actions input:hover {
+    background: #fff;
+    transform: scale(1.05);
+}
+
+/* -----------------------------------------------------------
+   FOOTER
+----------------------------------------------------------- */
+#footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #ccc;
+    font-size: 0.85rem;
+}
+
+/* -----------------------------------------------------------
+   REMOVE DEFAULT HTML5UP PANEL BACKGROUND
+----------------------------------------------------------- */
+#bg {
+    display: none !important;
+}
+
+/* -----------------------------------------------------------
+   RESPONSIVE OPTIMIZATION
+----------------------------------------------------------- */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    form .half {
+        width: 100%;
+    }
+
+    #wrapper {
+        padding: 40px 20px;
+    }
+}
+
+
+
+
